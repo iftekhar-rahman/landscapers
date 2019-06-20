@@ -1,1 +1,32 @@
 /*============== Footer CSS ================*/
+.footer-area {
+    padding: 115px 0 30px;
+}
+
+.footer-area .boxed-btn {
+    background: transparent;
+    color: #2A7D2E;
+    margin-bottom: 40px;
+}
+
+.footer-area .boxed-btn:hover {
+    background: #2A7D2E;
+    color: #fff;
+}
+.footer-text a{
+    color: #2A7D2E;
+    border-bottom: 2px solid transparent;
+    &:hover{
+        border-bottom: 2px solid #2A7D2E;
+    }
+    
+}
+.fbfooter{
+    display: inline-block;
+    font-size: 30px;
+    margin-top: 30px;
+    color: #2A7D2E;
+    &:hover{
+        color: #154D32 !important;
+    }
+}

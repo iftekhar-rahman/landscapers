@@ -3,6 +3,14 @@ jQuery(document).ready(function($){
     // $('select').niceSelect();
 
     // homepage-slides
+	$(".testimonials-wrap").owlCarousel({
+		items: 1,
+		loop: true,
+		nav: false,
+		dots: true,
+	});
+
+    // homepage-slides
 	// $(".homepage-slides").owlCarousel({
 	// 	items: 1,
 	// 	loop: true,

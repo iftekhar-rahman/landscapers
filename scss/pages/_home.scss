@@ -98,15 +98,139 @@ ul.portfolio-menu {
 }
 
 
+.services-area-2{
+    margin: 20px 0;
+    .pleft {
+        padding-left: 85px;
+    }
+}
 
 .srbanner-2{background-image: url(../img/banner.jpg)}
 .service-banner-2{
     @extend %backgroundimage;
-    height: 100px;
+    height: 450px;
 }
 .service-left-2 {
     color: #878275;
     font-size: 22px;
     line-height: 26px;
-    padding-right: 150px;
+    padding-right: 50px;
+    padding-bottom: 120px;
+    padding-top: 180px;
+}
+
+.service-wrap{
+    h3{
+        font-size: 26px;
+        line-height: 30px;
+        font-weight: 300;
+    }
+    .single-service-one {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 50px;
+        padding-bottom: 100px;
+        margin-top: -70px;
+        position: relative;
+        z-index: 2;
+        &:after {
+            background-color: #fff;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100px;
+            content: "";
+            z-index: -1;
+        }
+        h3 {
+            color: #2a7d2e;
+        }
+        h4 {
+            color: #0b3d2c;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22px;
+            margin: 35px 0 10px;
+        }
+        ul {
+            list-style: disc;
+            margin-left: 30px;
+            li {
+                margin-bottom: 7px;
+            }
+        }
+    }
+    .single-service-two {
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 90px;
+        padding-bottom: 30px;
+        background-color: #2A7D2E;
+        color: #fff;
+        .boxed-btn {
+            border-color: #fff;
+            margin-top: 15px;
+            &:hover {
+                background-color: #fff;
+                color: #2A7D2E;
+            }
+        }
+    }
+}
+
+.service-bg-2{background-image: url(../img/nature-1.jpg)}
+.single-service-bg-2{
+    @extend %backgroundimage;
+    height: 480px;
+}
+.single-service-four {
+    padding: 100px 0 30px 50px;
+}
+.single-service-four h3 {
+    color: #2A7D2E;
+}
+.author-wrap h5 {
+    color: #0b3d2c;
+    font-size: 16px;
+}
+
+
+/*===========.testimonials-area============*/ 
+.testimonials-area h5 {
+    font-size: 16px;
+}
+.single-testimonial {
+    font-size: 22px;
+    line-height: 30px;
+    padding: 0 40px;
+}
+.testimonials-area .section-title {
+    margin-bottom: 5px;
+}
+.testimonials-area {
+    padding: 80px 0 110px;
+    background-color: #FBF9F6;
+}
+.testimonials-area .owl-dots {
+    margin-top: 20px;
+}
+.testimonial-author .author-name {
+    font-size: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 30px;
+    &:after {
+        position: absolute;
+        left: -20px;
+        top: 14px;
+        width: 10px;
+        height: 1px;
+        background-color: #2F2F2F;
+        content: "";
+    }
+}
+.author-review span {
+    font-size: 16px;
 }

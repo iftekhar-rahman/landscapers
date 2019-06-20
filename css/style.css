@@ -8,7 +8,7 @@
 00. Helper CSS
 *****************************/
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Patrick+Hand&display=swap");
-.homepage-slide, .service-banner-2 {
+.homepage-slide, .service-banner-2, .single-service-bg-2 {
   background-size: cover;
   background-position: center;
   background-color: #ddd; }
@@ -112,22 +112,22 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   line-height: 52px;
   color: #124a2f; }
 
-/*
-======.owl-dots customization=======
-*/
+/*======.owl-dots customization=======*/
 .owl-dots div {
-  height: 5px;
-  width: 5px;
-  background-color: #BBBBBB;
+  height: 14px;
+  width: 14px;
+  background: transparent;
   display: inline-block;
   margin: 0 5px;
-  border-radius: 50%; }
+  border-radius: 50%;
+  border: 1px solid #000000; }
 
 .owl-dots {
   text-align: center; }
 
 .owl-dots div.active {
-  background-color: #0DA0F4; }
+  background-color: #2A7D2E;
+  border-color: #2A7D2E; }
 
 /*
 =====owl nav customization======
@@ -190,6 +190,32 @@ select {
       color: #2A7D2E; }
 
 /*============== Footer CSS ================*/
+.footer-area {
+  padding: 115px 0 30px; }
+
+.footer-area .boxed-btn {
+  background: transparent;
+  color: #2A7D2E;
+  margin-bottom: 40px; }
+
+.footer-area .boxed-btn:hover {
+  background: #2A7D2E;
+  color: #fff; }
+
+.footer-text a {
+  color: #2A7D2E;
+  border-bottom: 2px solid transparent; }
+  .footer-text a:hover {
+    border-bottom: 2px solid #2A7D2E; }
+
+.fbfooter {
+  display: inline-block;
+  font-size: 30px;
+  margin-top: 30px;
+  color: #2A7D2E; }
+  .fbfooter:hover {
+    color: #154D32 !important; }
+
 /*****************************
 00. Button CSS
 *****************************/
@@ -292,16 +318,126 @@ ul.portfolio-menu li {
   padding: 7px;
   cursor: pointer; }
 
+.services-area-2 {
+  margin: 20px 0; }
+  .services-area-2 .pleft {
+    padding-left: 85px; }
+
 .srbanner-2 {
   background-image: url(../img/banner.jpg); }
 
 .service-banner-2 {
-  height: 100px; }
+  height: 450px; }
 
 .service-left-2 {
   color: #878275;
   font-size: 22px;
   line-height: 26px;
-  padding-right: 150px; }
+  padding-right: 50px;
+  padding-bottom: 120px;
+  padding-top: 180px; }
+
+.service-wrap h3 {
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: 300; }
+
+.service-wrap .single-service-one {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  margin-top: -70px;
+  position: relative;
+  z-index: 2; }
+  .service-wrap .single-service-one:after {
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    content: "";
+    z-index: -1; }
+  .service-wrap .single-service-one h3 {
+    color: #2a7d2e; }
+  .service-wrap .single-service-one h4 {
+    color: #0b3d2c;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    margin: 35px 0 10px; }
+  .service-wrap .single-service-one ul {
+    list-style: disc;
+    margin-left: 30px; }
+    .service-wrap .single-service-one ul li {
+      margin-bottom: 7px; }
+
+.service-wrap .single-service-two {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 90px;
+  padding-bottom: 30px;
+  background-color: #2A7D2E;
+  color: #fff; }
+  .service-wrap .single-service-two .boxed-btn {
+    border-color: #fff;
+    margin-top: 15px; }
+    .service-wrap .single-service-two .boxed-btn:hover {
+      background-color: #fff;
+      color: #2A7D2E; }
+
+.service-bg-2 {
+  background-image: url(../img/nature-1.jpg); }
+
+.single-service-bg-2 {
+  height: 480px; }
+
+.single-service-four {
+  padding: 100px 0 30px 50px; }
+
+.single-service-four h3 {
+  color: #2A7D2E; }
+
+.author-wrap h5 {
+  color: #0b3d2c;
+  font-size: 16px; }
+
+/*===========.testimonials-area============*/
+.testimonials-area h5 {
+  font-size: 16px; }
+
+.single-testimonial {
+  font-size: 22px;
+  line-height: 30px;
+  padding: 0 40px; }
+
+.testimonials-area .section-title {
+  margin-bottom: 5px; }
+
+.testimonials-area {
+  padding: 80px 0 110px;
+  background-color: #FBF9F6; }
+
+.testimonials-area .owl-dots {
+  margin-top: 20px; }
+
+.testimonial-author .author-name {
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  position: relative;
+  margin-left: 30px; }
+  .testimonial-author .author-name:after {
+    position: absolute;
+    left: -20px;
+    top: 14px;
+    width: 10px;
+    height: 1px;
+    background-color: #2F2F2F;
+    content: ""; }
+
+.author-review span {
+  font-size: 16px; }
 
 /*# sourceMappingURL=style.css.map */

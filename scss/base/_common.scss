@@ -45,22 +45,22 @@ input, textarea{
 
 
 
-/*
-======.owl-dots customization=======
-*/
+/*======.owl-dots customization=======*/
 .owl-dots div {
-    height: 5px;
-    width: 5px;
-    background-color: #BBBBBB;
+    height: 14px;
+    width: 14px;
+    background: transparent;
     display: inline-block;
     margin: 0 5px;
     border-radius: 50%;
+    border: 1px solid #000000;
 }
 .owl-dots {
     text-align: center;
 }
 .owl-dots div.active {
-    background-color: #0DA0F4;
+    background-color: #2A7D2E;
+    border-color: #2A7D2E;
 }
 
 /*
