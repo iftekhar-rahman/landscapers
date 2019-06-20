@@ -1,0 +1,112 @@
+/*****************************
+00. Home CSS
+*****************************/
+
+.homepage-slide{
+    background-image: url(../img/banner.jpg);
+    @extend %backgroundimage;
+}
+
+
+/*=========services-area============*/ 
+.services-box {
+    background-color: #fff;
+    margin-top: -80px;
+    box-shadow: 0 5px 30px 0 rgba(0,0,0,.05);
+}
+.single-service-item {
+    padding: 30px 40px;
+    border-right: 1px solid #E7E7E7;
+    margin: 40px 0;
+    h3 {
+        font-weight: 300;
+        font-size: 26px;
+        line-height: 30px;
+        margin-bottom: 20px;
+        a {
+            border-bottom: 2px solid transparent;
+        }
+        a:hover {
+            border-bottom: 2px solid #2A7D2E;
+        }
+    }
+    a {
+        color: #2A7D2E;
+        display: inline-block;
+    }
+}
+.col-md-3:nth-child(4) .single-service-item {
+    border-right: 0;
+}
+
+/*===========.about-us-area================*/ 
+.about-us-area {
+    padding: 90px 0 40px 0;
+}
+.about-big-title {
+    margin-bottom: 90px;
+    h1 {
+        font-size: 70px;
+        line-height: 74px;
+        font-weight: 200;
+        color: #2A7D2E;
+        margin-bottom: 25px;
+    }
+}
+.single-about-item {
+    .number {
+        font-weight: 500;
+        font-size: 80px;
+        display: block;
+        line-height: 96px;
+        color: #2A7D2E;
+        margin-bottom: 15px;
+        span {
+            display: block;
+            font-size: 34px;
+            line-height: 34px;
+            font-weight: 300;
+            font-family: $patric-font;
+            margin-top: 10px;
+        }
+    }
+    h3 {
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 30px;
+        margin-bottom: 10px;
+    }
+}
+
+
+/*========portfolio-area==========*/ 
+.portfolio-area {
+    background-color: #FBF9F6;
+    padding: 70px 0 50px;
+    .section-title {
+        margin-bottom: 30px;
+    }
+}
+ul.portfolio-menu {
+    li {
+        display: inline-block;
+        color: #0b3d2c;
+        font-weight: 700;
+        padding: 7px;
+        cursor: pointer;
+    }
+}
+
+
+
+.srbanner-2{background-image: url(../img/banner.jpg)}
+.service-banner-2{
+    @extend %backgroundimage;
+    height: 100px;
+}
+.service-left-2 {
+    color: #878275;
+    font-size: 22px;
+    line-height: 26px;
+    padding-right: 150px;
+}

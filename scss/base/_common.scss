@@ -1,0 +1,115 @@
+/*==============Common CSS===================*/
+
+body {
+    font-family: $body-font;
+    font-size: $body-font-size;
+    color: $body-color;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 15px;
+    font-weight: 500;
+}
+p {
+    &:last-child{
+    	margin-bottom: 0;
+    }
+}
+a, button, img, input, span {
+    @extend %basetransition; 
+}
+input[type=text], input[type=email], input[type=password], input[type=tel], input[type=url], textarea {
+    
+}
+input[type=submit], button[type=submit]{
+    cursor: pointer;
+}
+input[type=submit]:hover, button[type=submit]:hover {
+    background-color: #0DA0F4 ;
+    color: #fff;
+}
+input, textarea{
+	@include placeholder{
+		color: $body-color;
+	}
+}
+.boxed-btn, input[type=submit], button[type=submit]{
+    &:hover{
+
+    }
+}
+.section-title {
+    font-size: 46px;
+    line-height: 52px;
+    color: #124a2f;
+}
+
+
+
+/*
+======.owl-dots customization=======
+*/
+.owl-dots div {
+    height: 5px;
+    width: 5px;
+    background-color: #BBBBBB;
+    display: inline-block;
+    margin: 0 5px;
+    border-radius: 50%;
+}
+.owl-dots {
+    text-align: center;
+}
+.owl-dots div.active {
+    background-color: #0DA0F4;
+}
+
+/*
+=====owl nav customization======
+*/
+.owl-nav div {
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    color: #ADADAD;
+    font-size: 50px;
+    line-height: 60px;
+    margin-top: -35px;
+}
+.owl-nav div.owl-next {
+    left: auto;
+    right: 0px;
+}
+.owl-nav div:hover {
+    color: #0DA0F4;
+}
+
+select {
+    font-size: 19px;
+    color: #0da0f4;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 0;
+    padding: 8px 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

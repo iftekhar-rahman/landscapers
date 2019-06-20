@@ -1,0 +1,46 @@
+/*=============== Header CSS ==================*/
+.header-top {
+    background-color: #124A2F;
+    color: #fff;
+    padding: 18px 0px;
+    .header-mail:hover {
+        color: #9bd49e;
+        text-decoration: underline;
+    }
+    .htopf:hover{
+        color: #9bd49e;
+    }
+    .htopf i.fa {
+        font-size: 20px;
+    }
+}
+
+.mainmenu-area{
+    padding: 15px 0;
+    .mainmenu ul {
+        li {
+            display: inline-block;
+            a {
+                padding: 0px 10px 0px 10px;
+                line-height: 60px;
+                font-size: 20px;
+                font-weight: 700;
+                color: $mainmenu-link-color;
+            }
+            &:hover a {
+                color: #2A7D2E;
+            }
+        }
+    }
+    .header-right i.fa {
+        font-size: 22px;
+        margin-right: 8px;
+        cursor: pointer;
+        &:hover {
+            color: #2A7D2E;
+        }
+    }
+}
+
+
+

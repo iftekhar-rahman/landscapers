@@ -1,0 +1,307 @@
+/*****************************
+00. Variables CSS
+******************************/
+/*****************************
+00. Mixins CSS
+******************************/
+/*****************************
+00. Helper CSS
+*****************************/
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Patrick+Hand&display=swap");
+.homepage-slide, .service-banner-2 {
+  background-size: cover;
+  background-position: center;
+  background-color: #ddd; }
+
+a, button, img, input, span {
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in; }
+
+.boxed-btn {
+  font-family: "Montserrat", sans-serif; }
+
+/*======fonts==============*/
+/*=================== Reset CSS =====================*/
+img {
+  max-width: 100%;
+  height: auto; }
+
+a, a:hover, a:focus, a:active, button, button:focus,
+input, input:focus, select, textarea, textarea:focus, .slick-slide, .slick-slide:focus, .slick-slide:active {
+  outline: 0 solid; }
+
+::selection {
+  background: #90B1C3;
+  color: #fff; }
+
+::-moz-selection {
+  background: #90B1C3;
+  color: #fff; }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+input[type=number] {
+  -moz-appearance: textfield; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+a, button {
+  color: inherit;
+  display: inline-block;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer; }
+
+*:focus {
+  outline: none !important; }
+
+a:focus {
+  color: inherit;
+  outline: none;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+button, input[type=submit] {
+  cursor: pointer; }
+
+/*==============Common CSS===================*/
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #2f2f2f; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 15px;
+  font-weight: 500; }
+
+p:last-child {
+  margin-bottom: 0; }
+
+input[type=submit], button[type=submit] {
+  cursor: pointer; }
+
+input[type=submit]:hover, button[type=submit]:hover {
+  background-color: #0DA0F4;
+  color: #fff; }
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #2f2f2f; }
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #2f2f2f; }
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #2f2f2f; }
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #2f2f2f; }
+
+.section-title {
+  font-size: 46px;
+  line-height: 52px;
+  color: #124a2f; }
+
+/*
+======.owl-dots customization=======
+*/
+.owl-dots div {
+  height: 5px;
+  width: 5px;
+  background-color: #BBBBBB;
+  display: inline-block;
+  margin: 0 5px;
+  border-radius: 50%; }
+
+.owl-dots {
+  text-align: center; }
+
+.owl-dots div.active {
+  background-color: #0DA0F4; }
+
+/*
+=====owl nav customization======
+*/
+.owl-nav div {
+  display: inline-block;
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  color: #ADADAD;
+  font-size: 50px;
+  line-height: 60px;
+  margin-top: -35px; }
+
+.owl-nav div.owl-next {
+  left: auto;
+  right: 0px; }
+
+.owl-nav div:hover {
+  color: #0DA0F4; }
+
+select {
+  font-size: 19px;
+  color: #0da0f4;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 0;
+  padding: 8px 10px; }
+
+/*=============== Header CSS ==================*/
+.header-top {
+  background-color: #124A2F;
+  color: #fff;
+  padding: 18px 0px; }
+  .header-top .header-mail:hover {
+    color: #9bd49e;
+    text-decoration: underline; }
+  .header-top .htopf:hover {
+    color: #9bd49e; }
+  .header-top .htopf i.fa {
+    font-size: 20px; }
+
+.mainmenu-area {
+  padding: 15px 0; }
+  .mainmenu-area .mainmenu ul li {
+    display: inline-block; }
+    .mainmenu-area .mainmenu ul li a {
+      padding: 0px 10px 0px 10px;
+      line-height: 60px;
+      font-size: 20px;
+      font-weight: 700;
+      color: #6D6D6D; }
+    .mainmenu-area .mainmenu ul li:hover a {
+      color: #2A7D2E; }
+  .mainmenu-area .header-right i.fa {
+    font-size: 22px;
+    margin-right: 8px;
+    cursor: pointer; }
+    .mainmenu-area .header-right i.fa:hover {
+      color: #2A7D2E; }
+
+/*============== Footer CSS ================*/
+/*****************************
+00. Button CSS
+*****************************/
+.boxed-btn {
+  background-color: #2A7D2E;
+  border: 1px solid #2A7D2E;
+  border-radius: 50px;
+  padding: 15px 30px; }
+  .boxed-btn:hover {
+    background-color: #154D32; }
+
+.bordered-btn {
+  border-bottom: 2px solid #2A7D2E;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px; }
+  .bordered-btn:hover {
+    color: #154D32; }
+
+.boxed-btn, .boxed-btn:hover {
+  color: #ffffff; }
+
+/*****************************
+00. Home CSS
+*****************************/
+.homepage-slide {
+  background-image: url(../img/banner.jpg); }
+
+/*=========services-area============*/
+.services-box {
+  background-color: #fff;
+  margin-top: -80px;
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.05); }
+
+.single-service-item {
+  padding: 30px 40px;
+  border-right: 1px solid #E7E7E7;
+  margin: 40px 0; }
+  .single-service-item h3 {
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 20px; }
+    .single-service-item h3 a {
+      border-bottom: 2px solid transparent; }
+    .single-service-item h3 a:hover {
+      border-bottom: 2px solid #2A7D2E; }
+  .single-service-item a {
+    color: #2A7D2E;
+    display: inline-block; }
+
+.col-md-3:nth-child(4) .single-service-item {
+  border-right: 0; }
+
+/*===========.about-us-area================*/
+.about-us-area {
+  padding: 90px 0 40px 0; }
+
+.about-big-title {
+  margin-bottom: 90px; }
+  .about-big-title h1 {
+    font-size: 70px;
+    line-height: 74px;
+    font-weight: 200;
+    color: #2A7D2E;
+    margin-bottom: 25px; }
+
+.single-about-item .number {
+  font-weight: 500;
+  font-size: 80px;
+  display: block;
+  line-height: 96px;
+  color: #2A7D2E;
+  margin-bottom: 15px; }
+  .single-about-item .number span {
+    display: block;
+    font-size: 34px;
+    line-height: 34px;
+    font-weight: 300;
+    font-family: "Patrick Hand", cursive;
+    margin-top: 10px; }
+
+.single-about-item h3 {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 10px; }
+
+/*========portfolio-area==========*/
+.portfolio-area {
+  background-color: #FBF9F6;
+  padding: 70px 0 50px; }
+  .portfolio-area .section-title {
+    margin-bottom: 30px; }
+
+ul.portfolio-menu li {
+  display: inline-block;
+  color: #0b3d2c;
+  font-weight: 700;
+  padding: 7px;
+  cursor: pointer; }
+
+.srbanner-2 {
+  background-image: url(../img/banner.jpg); }
+
+.service-banner-2 {
+  height: 100px; }
+
+.service-left-2 {
+  color: #878275;
+  font-size: 22px;
+  line-height: 26px;
+  padding-right: 150px; }
+
+/*# sourceMappingURL=style.css.map */
