@@ -6,6 +6,9 @@
 // %imagezommin{
 // 	@include transform(scale3d(1.05, 1.05, 1.05));
 // }
+%backtransaprent{
+	background: transparent;
+}
 %borderradius50{
 	border-radius: 50%;
 }
@@ -58,14 +61,9 @@
 %basetransition{
 	@include transition(all .3s ease-in);
 }
-// %absCenter{
-// 	left: 50%;
-// 	top: 50%;
-// 	@include transform(translate(-50%, -50%));
-// }
-// %basetransition{
-// 	@include transition(all .3s ease-in);
-// }
+%basetransition2{
+	@include transition(.5s);
+}
 %invisible{
 	visibility: hidden;
 	opacity: 0;

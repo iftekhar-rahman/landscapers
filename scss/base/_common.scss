@@ -101,11 +101,11 @@ input, textarea{
     border-radius: 50%;
     text-align: center;
     font-size: 45px;
-    transition: .3s;
+    @extend %basetransition;
     padding-right: 5px;
     &.owl-next {
         left: auto;
-        right: 0px;
+        right: -10px;
         padding-left: 5px;
         padding-right: 0;
     }

@@ -1,11 +1,11 @@
-/*****************************
-00. Home CSS
-*****************************/
+/*================ Home-Page CSS ===================*/
+
+/*========.header-area============*/ 
 .header-area{
-    position: relative;
+    @extend %posrelative;
 }
 .site-logo {
-    position: absolute;
+    @extend %posabsolute;
     left: 0;
     top: 0;
     width: 200px;
@@ -13,13 +13,14 @@
     background: #2A7D2E;
     height: 150px;
 }
-
 .site-logo img {
     width: 170px;
     margin-left: 15px;
     margin-top: 10px;
 }
 
+
+/*==========.homepage-slider-area=============*/ 
 .slide-bg-1{background-image: url(../img/slide-1.jpg)}
 .slide-bg-2{background-image: url(../img/slide-2.jpg)}
 .homepage-slider-area, .single-homepage-slide{
@@ -27,42 +28,62 @@
     height: 650px;
 }
 .single-homepage-slide{
-    color: #fff;
+    @extend %white-color;
     font-size: 22px;
     font-weight: 600;
     padding-top: 170px;
-    h1{
-        font-size: 66px;
-        line-height: 81px;
-        font-weight: 700;
-        color: #fff;
-    }
+    
+}
+.single-homepage-slide h1{
+    font-size: 66px;
+    line-height: 81px;
+    font-weight: 700;
+    @extend %white-color;
 }
 .slide-btn:nth-child(1) .boxed-btn {
-    background: transparent;
+    @extend %backtransaprent;
 }
-
 .slide-btn .boxed-btn:nth-child(1) {
-    background: transparent;
+    @extend %backtransaprent;
     border-color: #fff;
     margin-right: 10px;
 }
-
 .slide-btn .boxed-btn:nth-child(2) {
-    background-color: #fff;
+    @extend %white-bg-color;
     color: #2A7D2E;
 }
-
 .slide-btn .boxed-btn {
     font-size: 13px;
     line-height: 17px;
     font-weight: 500;
     margin-top: 30px;
 }
-
 .slide-btn .boxed-btn:hover {
     background-color: #2A7D2E;
     border-color: #2A7D2E;
+    color: #fff;
+}
+.homepage-slider-area .owl-nav div {
+    left: 20px;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    font-size: 35px;
+    background-color: rgba(255,255,255,.1);
+    opacity: 0;
+    visibility: hidden;
+    @extend %basetransition2;
+}
+.homepage-slider-area .owl-nav div.owl-next {
+    left: auto;
+    right: 20px;
+}
+.homepage-slider-area:hover .owl-nav div {
+    opacity: 1;
+    visibility: visible;
+}
+.homepage-slider-area .owl-nav div:hover {
+    background-color: #2A7D2E;
     color: #fff;
 }
 
@@ -71,42 +92,42 @@
 .services-area{
     position: relative;
     z-index: 2;
-    .grass-img {
-        position: absolute;
-        left: 0;
-        top: -101px;
-        right: 0;
-        text-align: center;
-    }
-    .services-box {
-        background-color: #fff;
-        margin-top: -80px;
-        box-shadow: 0 5px 30px 0 rgba(0,0,0,.05);
-    }
+}
+.grass-img {
+    position: absolute;
+    left: 0;
+    top: -101px;
+    right: 0;
+    text-align: center;
+}
+.services-box {
+    background-color: #fff;
+    margin-top: -80px;
+    box-shadow: 0 5px 30px 0 rgba(0,0,0,.05);
 }
 .single-service-item {
     padding: 30px 40px;
     border-right: 1px solid #E7E7E7;
     margin: 40px 0;
-    img{
-        margin-bottom: 15px;
-    }
-    h3 {
-        font-weight: 300;
-        font-size: 26px;
-        line-height: 30px;
-        margin-bottom: 20px;
-        a {
-            border-bottom: 2px solid transparent;
-        }
-        a:hover {
-            border-bottom: 2px solid #2A7D2E;
-        }
-    }
-    a {
-        color: #2A7D2E;
-        display: inline-block;
-    }
+}
+.single-service-item a{
+    color: #2A7D2E;
+    display: inline-block;
+}
+.single-service-item .iconht a{
+    border-bottom: 2px solid transparent;
+}
+.single-service-item .iconht a:hover{
+    border-bottom: 2px solid #2A7D2E;
+}
+.single-service-item h3{
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.single-service-item .service-icon{
+    margin-bottom: 15px;
 }
 .col-md-3:nth-child(4) .single-service-item {
     border-right: 0;
@@ -118,39 +139,40 @@
 }
 .about-big-title {
     margin-bottom: 80px;
-    h1 {
-        font-size: 70px;
-        line-height: 74px;
-        font-weight: 200;
-        color: #2A7D2E;
-        margin-bottom: 25px;
-    }
+}
+.about-big-title h1{
+    font-size: 70px;
+    line-height: 74px;
+    font-weight: 200;
+    color: #2A7D2E;
+    margin-bottom: 25px;
 }
 .single-about-item {
+    -ms-flex-preferred-size: 24%;
     flex-basis: 24%;
     padding-bottom: 50px;
-    .number {
-        font-weight: 500;
-        font-size: 80px;
-        display: block;
-        line-height: 96px;
-        color: #2A7D2E;
-        margin-bottom: 15px;
-        span.yeart {
-            display: block;
-            font-size: 34px;
-            line-height: 34px;
-            font-weight: 300;
-            font-family: $patric-font;
-            margin-top: 10px;
-        }
-    }
-    h3 {
-        font-size: 22px;
-        font-weight: 300;
-        line-height: 30px;
-        margin-bottom: 10px;
-    }
+}
+.single-about-item .number{
+    font-weight: 500;
+    font-size: 80px;
+    display: block;
+    line-height: 96px;
+    color: #2A7D2E;
+    margin-bottom: 15px;
+}
+.single-about-item .number .yeart{
+    display: block;
+    font-size: 34px;
+    line-height: 34px;
+    font-weight: 300;
+    font-family: $patric-font;
+    margin-top: 10px;
+}
+.single-about-item h3{
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 10px;
 }
 .about-leaf-bg {
     width: 14%;
@@ -161,10 +183,6 @@
     background-position: center bottom;
     background-attachment: scroll;
     background-size: auto;
-    // border-top-width: 1px;
-    // border-right-width: 1px;
-    // border-bottom-width: 1px;
-    // border-left-width: 1px;
 }
 .about-leaf-bgright{
     background-image: url(https://landscaping.vamtam.com/wp-content/uploads/2017/09/plants-right.svg);
@@ -172,21 +190,16 @@
     background-position: center bottom;
     background-attachment: scroll;
     background-size: auto;
-    // border-top-width: 1px;
-    // border-right-width: 1px;
-    // border-bottom-width: 1px;
-    // border-left-width: 1px;
 }
 
 /*========portfolio-area==========*/ 
 .portfolio-area {
     background-color: #FBF9F6;
     padding: 70px 0 50px;
-    .section-title {
-        margin-bottom: 30px;
-    }
 }
-
+.portfolio-area .section-title {
+    margin-bottom: 30px;
+}
 .portfolio-filters button {
     color: #0b3d2c;
     font-weight: 700;
@@ -202,6 +215,7 @@
         height: 20px;
         bottom: 0;
         left: 50%;
+        -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
         color: #fff;
         font-size: 11px;
@@ -209,7 +223,7 @@
         line-height: 1.8;
         text-align: center;
         opacity: 0;
-        transition: .3s;
+        @extend %basetransition;
     }
     &::after {
         position: absolute;
@@ -221,7 +235,9 @@
         border-left: 4px solid transparent;
         border-right: 4px solid transparent;
         border-top: 4px solid #2a7d2e;
+        -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
+        -webkit-transition: bottom .3s;
         transition: bottom .3s;
         opacity: 0;
     }
@@ -239,11 +255,9 @@
 }
 .portfolio__content {
     position: relative;
-    /* width: 450px; */
-    /* z-index: 1; */
-    /* height: 300px; */
     overflow: hidden;
     border-radius: 10px;
+    display: block;
 }
 .hover-content {
     position: absolute;
@@ -255,14 +269,21 @@
     text-align: center;
     color: #fff;
     padding: 0 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
-    transition: .3s;
+    @extend %basetransition;
     opacity: 0;
 }
 .portfolio__content:hover .hover-content {
     bottom: 50%;
+    -webkit-transform: translateY(50%);
     transform: translateY(50%);
     opacity: 1;
 }
@@ -281,10 +302,13 @@
     opacity: 1;
 }
 .portfolio__content .portfolio-image img {
+    -webkit-transform: scale(1);
     transform: scale(1);
-    transition: .3s;
+    @extend %basetransition;
+    width: 100%;
 }
 .portfolio__content:hover .portfolio-image img {
+    -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
 .portfolio--item.grid-item {
@@ -292,11 +316,12 @@
 }
 
 
+/*========.services-area-2=======*/ 
 .services-area-2{
     margin: 20px 0;
-    .pleft {
-        padding-left: 85px;
-    }
+}
+.services-area-2 .pleft {
+    padding-left: 85px;
 }
 
 .srbanner-2{background-image: url(../img/banner.jpg)}
@@ -367,7 +392,7 @@
         padding-bottom: 30px;
         background-color: #2A7D2E;
         color: #fff;
-        img{
+        .boy-icon{
             margin-bottom: 15px;
         }
         .boxed-btn {

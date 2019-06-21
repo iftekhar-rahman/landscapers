@@ -31,23 +31,6 @@
     }
 }
 
-// @mixin placeholder {
-//     @include optional-at-root('::-webkit-input-placeholder') {
-//         @content;
-//     }
-//     @include optional-at-root(':-moz-placeholder') {
-//         @content;
-//     }
-//     @include optional-at-root('::-moz-placeholder') {
-//         @content;
-//     }
-//     @include optional-at-root(':-ms-input-placeholder') {
-//         @content;
-//     }
-// }
-
-
-
 
 // Transition
 @mixin transition($transition...) {
@@ -67,8 +50,6 @@
 // Flexbox
 @mixin flexbox{
 	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-flex;
 	display: -ms-flexbox;
 	display: flex;
 }
@@ -76,8 +57,6 @@
 // Inline flex
 @mixin inline-flex{
 	display: -webkit-inline-box;
-	display: -webkit-inline-flex;
-	display: -moz-inline-flex;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
 }

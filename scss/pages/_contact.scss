@@ -5,26 +5,25 @@
     height: 300px;
     position: relative;
     @extend %zindex2;
-    &:after{
-        @extend %pseudoabsolute;
-        background-color: rgba(10, 10, 10, 0.3);
-    }
-    h1 {
-        color: #fff;
-        font-size: 52px;
-        font-weight: 700;
-        margin-top: 115px;
-    }
 }
-
-.contact-page{
-    .section-title{
-        font-size: 80px;
-        font-weight: 400;
-        line-height: 96px;
-    }
+.contact-banner-area:after{
+    @extend %pseudoabsolute;
+    background-color: rgba(10, 10, 10, 0.3);
 }
-
+.contact-banner-area h1 {
+    color: #fff;
+    font-size: 52px;
+    font-weight: 700;
+    margin-top: 115px;
+}
+.contact-page .section-title{
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 96px;
+}
+.contact-page .single-about-text{
+    width: 100%;
+}
 .google-map, .google-map iframe{
     height: 920px;
     width: 100%;
