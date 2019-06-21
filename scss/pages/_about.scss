@@ -1,0 +1,244 @@
+/*===========about-page================*/ 
+
+.about-banner{background-image: url(../img/pic5-1.jpg)}
+.about-banner-area{
+    @extend %backgroundimage;
+    background-position: 0 0;
+    height: 430px;
+    position: relative;
+    @extend %zindex2;
+    &:after{
+        @extend %pseudoabsolute;
+        background-color: rgba(10, 10, 10, 0.3);
+    }
+    .scroll-next-section{
+        position: absolute;
+        left: 0;
+        bottom: -135px;
+        right: 0;
+        cursor: pointer;
+        width: 80px;
+        margin: 0 auto;
+    }
+}
+
+
+.about-banner-text {
+    margin-top: 170px;
+    h1 {
+        color: #fff;
+        font-size: 60px;
+        line-height: 60px;
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+    span {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+}
+
+
+/*=========.offers-area ===========*/ 
+.offers-area {
+    padding: 150px 0 120px;
+    .offer-text{
+        font-size: 22px;
+        line-height: 26px;
+    }
+}
+
+/*=========.carousel-area===========*/ 
+.single-carousel-item {
+    display: block;
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+    transition: .7s;
+    z-index: 2;
+}
+
+.carousel-hover {
+    position: absolute;
+    left: 0;
+    top: 60%;
+    right: 0;
+    text-align: center;
+    font-size: 46px;
+    font-weight: 500;
+    line-height: 46px;
+    transition: .7s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 3;
+}
+
+.carousel-image {
+    border-radius: 5px;
+    transform: scale(1);
+    transition: .7s;
+    position: relative;
+}
+
+.single-carousel-item:hover .carousel-image {
+    transform: scale(1.1);
+}
+
+.single-carousel-item {
+    border-radius: 5px;
+}
+
+.single-carousel-item:hover .carousel-hover {
+    top: 50%;
+    margin-top: -23px;
+    opacity: 1;
+    visibility: visible;
+    color: #fff;
+}
+
+.single-carousel-item:hover .carousel-image:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    content: "";
+    z-index: 1;
+    opacity: .5;
+}
+.carousel-wrap .owl-nav {
+    opacity: 0;
+    transition: .3s;
+}
+
+.carousel-wrap:hover .owl-nav {
+    opacity: 1;
+}
+
+/*=========.about-us-area-2==========*/ 
+.about-us-area.about-us-area-2 {
+    padding: 120px 0 50px;
+}
+.about-us-area.about-us-area-2 .single-about-item {
+    flex-basis: 32%;
+}
+.about-us-area.about-us-area-2 .about-leaf-bg {
+    width: 2%;
+}
+.about-us-area.about-us-area-2 .single-about-item .number {
+    font-size: 42px;
+    line-height: 50px;
+}
+
+.about-us-area.about-us-area-2 .single-about-item .plussign {
+    font-weight: 300;
+    margin-left: -10px;
+}
+
+.about-us-area.about-us-area-2 .single-about-item .number span.yeart {
+    color: #124a2f;
+    margin-top: 15px;
+}
+
+
+/*========.services-area-3=============*/ 
+.services-area-3 {
+    padding: 60px 0;
+    background-color: #FCFAF7;
+}
+.threeservice-bg img {
+    border-radius: 5px 5px 0 0;
+}
+.threeservice-content {
+    padding: 30px 20px;
+    border-radius: 50px;
+}
+ul.threeservice-content li:nth-child(2) a {
+    color: #0b3d2c;
+    font-size: 26px;
+}
+.threesingle-service {
+    box-shadow: 0 5px 30px 0 rgba(0,0,0,.05);
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+.threesingle-service-text {
+    margin-top: 30px;
+}
+.threesingle-service-text h5 {
+    font-size: 16px;
+    color: #0b3d2c;
+    margin-bottom: 5px;
+}
+.threesingle-service-text {
+    a{
+    color: #124a2f;
+    font-size: 14px;
+    line-height: 16px;
+    border-bottom: 2px solid #124a2f;
+    }
+    ul {
+        list-style: disc;
+        margin-left: 20px;
+    }
+}
+
+/*=========.about-text-area============*/ 
+.nubmber-bg-1{background-image: url(https://landscaping.vamtam.com/wp-content/uploads/2016/12/1.svg)}
+.nubmber-bg-2{background-image: url(https://landscaping.vamtam.com/wp-content/uploads/2016/12/2.svg)}
+.nubmber-bg-3{background-image: url(https://landscaping.vamtam.com/wp-content/uploads/2016/12/3.svg)}
+.number-bg {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: contain;
+    padding: 70px 0 30px;
+}
+.about-text-area {
+    padding: 120px 0;
+    h4 {
+        color: #2a7d2e;
+        font-size: 22px;
+        font-weight: 400;
+    }
+}
+
+
+/*========.single-about-area==========*/ 
+
+.single-about-bg-1{background-image: url(../img/pic5-1.jpg)}
+.single-about-bg-2{background-image: url(../img/pic8-1.jpg)}
+.single-about-bg-3{background-image: url(../img/Pic1.jpg)}
+.single-about-bg{
+    @extend %backgroundimage;
+    height: 520px;
+    &.contact-bg{
+        height: 780px;
+    }
+}
+.single-about-area {
+    &.colored-bg{
+        background-color: #FCFAF7;
+        padding: 80px 0;
+    }
+}
+.single-about-text h4 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+// .form-control {
+//     border-radius: 50px;
+//     height: 50px;
+//     padding: 8px 20px;
+// }
+
+
+
+
+
+
+

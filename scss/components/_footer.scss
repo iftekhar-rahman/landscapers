@@ -1,8 +1,10 @@
 /*============== Footer CSS ================*/
 .footer-area {
     padding: 115px 0 30px;
+    @extend %backgroundimage;
+    background-color: #FBFAF6;
 }
-
+.footer-bg{background-image: url(../img/footer.jpg)}
 .footer-area .boxed-btn {
     background: transparent;
     color: #2A7D2E;

@@ -8,10 +8,22 @@
 00. Helper CSS
 *****************************/
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Patrick+Hand&display=swap");
-.homepage-slide, .service-banner-2, .single-service-bg-2 {
+.footer-area, .homepage-slider-area, .single-homepage-slide, .service-banner-2, .single-service-bg-2, .about-banner-area, .single-about-bg, .contact-banner-area {
   background-size: cover;
   background-position: center;
   background-color: #ddd; }
+
+.about-banner-area:after, .contact-banner-area:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: -1; }
+
+.about-banner-area, .contact-banner-area {
+  z-index: 2; }
 
 a, button, img, input, span {
   -webkit-transition: all 0.3s ease-in;
@@ -88,11 +100,36 @@ h1, h2, h3, h4, h5, h6 {
 p:last-child {
   margin-bottom: 0; }
 
+input[type=text], input[type=email], input[type=password], input[type=tel], input[type=url], textarea {
+  border-radius: 50px;
+  height: 50px;
+  padding: 8px 20px; }
+
+.form-group {
+  margin-bottom: 25px; }
+  .form-group .form-control:focus {
+    box-shadow: none;
+    border-color: #2a7d2e; }
+  .form-group .form-control:hover {
+    border-color: #2a7d2e; }
+
+textarea {
+  height: 150px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  width: 100%;
+  margin-bottom: -7px; }
+  textarea:focus {
+    border-color: #2a7d2e; }
+  textarea:hover {
+    border-color: #2a7d2e; }
+
 input[type=submit], button[type=submit] {
-  cursor: pointer; }
+  cursor: pointer;
+  padding: 10px 25px; }
 
 input[type=submit]:hover, button[type=submit]:hover {
-  background-color: #0DA0F4;
+  background-color: #154D32;
   color: #fff; }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
@@ -129,33 +166,56 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   background-color: #2A7D2E;
   border-color: #2A7D2E; }
 
-/*
-=====owl nav customization======
-*/
+/*=====owl nav customization======*/
 .owl-nav div {
   display: inline-block;
   position: absolute;
-  left: 0px;
+  left: -10px;
   top: 50%;
-  color: #ADADAD;
-  font-size: 50px;
+  color: #2A7D2E;
   line-height: 60px;
-  margin-top: -35px; }
-
-.owl-nav div.owl-next {
-  left: auto;
-  right: 0px; }
-
-.owl-nav div:hover {
-  color: #0DA0F4; }
-
-select {
-  font-size: 19px;
-  color: #0da0f4;
+  margin-top: -30px;
+  width: 60px;
+  height: 60px;
   background-color: #fff;
-  border-radius: 5px;
-  border: 0;
-  padding: 8px 10px; }
+  border-radius: 50%;
+  text-align: center;
+  font-size: 45px;
+  transition: .3s;
+  padding-right: 5px; }
+  .owl-nav div.owl-next {
+    left: auto;
+    right: 0px;
+    padding-left: 5px;
+    padding-right: 0; }
+  .owl-nav div:hover {
+    color: #ffffff;
+    background-color: #2A7D2E; }
+
+/*========.nice-select=============*/
+.nice-select {
+  width: 100%;
+  border-radius: 50px;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 20px;
+  border-color: #ced4da; }
+  .nice-select .list {
+    width: 100%;
+    box-shadow: none;
+    border: 1px solid #ced4da; }
+  .nice-select:focus {
+    border-color: #154D32; }
+  .nice-select:hover {
+    border-color: #154D32; }
+  .nice-select:after {
+    right: 25px;
+    border-color: #ced4da;
+    width: 10px;
+    height: 10px;
+    margin-top: -6px; }
+  .nice-select:hover:after {
+    border-color: #2A7D2E; }
 
 /*=============== Header CSS ==================*/
 .header-top {
@@ -191,7 +251,11 @@ select {
 
 /*============== Footer CSS ================*/
 .footer-area {
-  padding: 115px 0 30px; }
+  padding: 115px 0 30px;
+  background-color: #FBFAF6; }
+
+.footer-bg {
+  background-image: url(../img/footer.jpg); }
 
 .footer-area .boxed-btn {
   background: transparent;
@@ -241,19 +305,87 @@ select {
 /*****************************
 00. Home CSS
 *****************************/
-.homepage-slide {
-  background-image: url(../img/banner.jpg); }
+.header-area {
+  position: relative; }
+
+.site-logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200px;
+  z-index: 9;
+  background: #2A7D2E;
+  height: 150px; }
+
+.site-logo img {
+  width: 170px;
+  margin-left: 15px;
+  margin-top: 10px; }
+
+.slide-bg-1 {
+  background-image: url(../img/slide-1.jpg); }
+
+.slide-bg-2 {
+  background-image: url(../img/slide-2.jpg); }
+
+.homepage-slider-area, .single-homepage-slide {
+  height: 650px; }
+
+.single-homepage-slide {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  padding-top: 170px; }
+  .single-homepage-slide h1 {
+    font-size: 66px;
+    line-height: 81px;
+    font-weight: 700;
+    color: #fff; }
+
+.slide-btn:nth-child(1) .boxed-btn {
+  background: transparent; }
+
+.slide-btn .boxed-btn:nth-child(1) {
+  background: transparent;
+  border-color: #fff;
+  margin-right: 10px; }
+
+.slide-btn .boxed-btn:nth-child(2) {
+  background-color: #fff;
+  color: #2A7D2E; }
+
+.slide-btn .boxed-btn {
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 500;
+  margin-top: 30px; }
+
+.slide-btn .boxed-btn:hover {
+  background-color: #2A7D2E;
+  border-color: #2A7D2E;
+  color: #fff; }
 
 /*=========services-area============*/
-.services-box {
-  background-color: #fff;
-  margin-top: -80px;
-  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.05); }
+.services-area {
+  position: relative;
+  z-index: 2; }
+  .services-area .grass-img {
+    position: absolute;
+    left: 0;
+    top: -101px;
+    right: 0;
+    text-align: center; }
+  .services-area .services-box {
+    background-color: #fff;
+    margin-top: -80px;
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.05); }
 
 .single-service-item {
   padding: 30px 40px;
   border-right: 1px solid #E7E7E7;
   margin: 40px 0; }
+  .single-service-item img {
+    margin-bottom: 15px; }
   .single-service-item h3 {
     font-weight: 300;
     font-size: 26px;
@@ -272,10 +404,10 @@ select {
 
 /*===========.about-us-area================*/
 .about-us-area {
-  padding: 90px 0 40px 0; }
+  padding: 90px 0 0px 0; }
 
 .about-big-title {
-  margin-bottom: 90px; }
+  margin-bottom: 80px; }
   .about-big-title h1 {
     font-size: 70px;
     line-height: 74px;
@@ -283,26 +415,45 @@ select {
     color: #2A7D2E;
     margin-bottom: 25px; }
 
-.single-about-item .number {
-  font-weight: 500;
-  font-size: 80px;
-  display: block;
-  line-height: 96px;
-  color: #2A7D2E;
-  margin-bottom: 15px; }
-  .single-about-item .number span {
+.single-about-item {
+  flex-basis: 24%;
+  padding-bottom: 50px; }
+  .single-about-item .number {
+    font-weight: 500;
+    font-size: 80px;
     display: block;
-    font-size: 34px;
-    line-height: 34px;
+    line-height: 96px;
+    color: #2A7D2E;
+    margin-bottom: 15px; }
+    .single-about-item .number span.yeart {
+      display: block;
+      font-size: 34px;
+      line-height: 34px;
+      font-weight: 300;
+      font-family: "Patrick Hand", cursive;
+      margin-top: 10px; }
+  .single-about-item h3 {
+    font-size: 22px;
     font-weight: 300;
-    font-family: "Patrick Hand", cursive;
-    margin-top: 10px; }
+    line-height: 30px;
+    margin-bottom: 10px; }
 
-.single-about-item h3 {
-  font-size: 22px;
-  font-weight: 300;
-  line-height: 30px;
-  margin-bottom: 10px; }
+.about-leaf-bg {
+  width: 14%; }
+
+.about-leaf-bgleft {
+  background-image: url(https://landscaping.vamtam.com/wp-content/uploads/2017/09/plants-left.svg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: scroll;
+  background-size: auto; }
+
+.about-leaf-bgright {
+  background-image: url(https://landscaping.vamtam.com/wp-content/uploads/2017/09/plants-right.svg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: scroll;
+  background-size: auto; }
 
 /*========portfolio-area==========*/
 .portfolio-area {
@@ -311,12 +462,106 @@ select {
   .portfolio-area .section-title {
     margin-bottom: 30px; }
 
-ul.portfolio-menu li {
-  display: inline-block;
+.portfolio-filters button {
   color: #0b3d2c;
   font-weight: 700;
-  padding: 7px;
-  cursor: pointer; }
+  margin: 7px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  position: relative; }
+  .portfolio-filters button:before {
+    position: absolute;
+    content: attr(data-count);
+    width: 25px;
+    height: 20px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 11px;
+    background: #2a7d2e;
+    line-height: 1.8;
+    text-align: center;
+    opacity: 0;
+    transition: .3s; }
+  .portfolio-filters button::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    bottom: -4px;
+    left: 50%;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #2a7d2e;
+    transform: translateX(-50%);
+    transition: bottom .3s;
+    opacity: 0; }
+
+.portfolio-filters button:hover::before {
+  bottom: 110%;
+  opacity: 1; }
+
+.portfolio-filters button:hover::after {
+  bottom: calc(110% - 4px);
+  opacity: 1; }
+
+.portfolio-filters button.is-checked {
+  text-decoration: line-through; }
+
+.portfolio__content {
+  position: relative;
+  /* width: 450px; */
+  /* z-index: 1; */
+  /* height: 300px; */
+  overflow: hidden;
+  border-radius: 10px; }
+
+.hover-content {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(0);
+  transition: .3s;
+  opacity: 0; }
+
+.portfolio__content:hover .hover-content {
+  bottom: 50%;
+  transform: translateY(50%);
+  opacity: 1; }
+
+.portfolio__content::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  z-index: 1; }
+
+.portfolio__content:hover:before {
+  opacity: 1; }
+
+.portfolio__content .portfolio-image img {
+  transform: scale(1);
+  transition: .3s; }
+
+.portfolio__content:hover .portfolio-image img {
+  transform: scale(1.2); }
+
+.portfolio--item.grid-item {
+  margin-top: 30px; }
 
 .services-area-2 {
   margin: 20px 0; }
@@ -335,7 +580,12 @@ ul.portfolio-menu li {
   line-height: 26px;
   padding-right: 50px;
   padding-bottom: 120px;
-  padding-top: 180px; }
+  padding-top: 180px;
+  background-image: url(https://landscaping.vamtam.com/wp-content/uploads/2017/09/Leaf-1-1.svg);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-attachment: scroll;
+  background-size: auto; }
 
 .service-wrap h3 {
   font-size: 26px;
@@ -380,6 +630,8 @@ ul.portfolio-menu li {
   padding-bottom: 30px;
   background-color: #2A7D2E;
   color: #fff; }
+  .service-wrap .single-service-two img {
+    margin-bottom: 15px; }
   .service-wrap .single-service-two .boxed-btn {
     border-color: #fff;
     margin-top: 15px; }
@@ -404,6 +656,17 @@ ul.portfolio-menu li {
   font-size: 16px; }
 
 /*===========.testimonials-area============*/
+.testimonial-bg {
+  background-image: url(https://landscaping.vamtam.com/wp-content/uploads/2017/09/Leaf-testimonials-1.svg); }
+
+.testimonials-area {
+  padding: 80px 0 0px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: contain;
+  border-bottom: 1px solid #F5F1EB; }
+
 .testimonials-area h5 {
   font-size: 16px; }
 
@@ -415,9 +678,9 @@ ul.portfolio-menu li {
 .testimonials-area .section-title {
   margin-bottom: 5px; }
 
-.testimonials-area {
-  padding: 80px 0 110px;
-  background-color: #FBF9F6; }
+.testimonial-like-icon {
+  padding-top: 90px;
+  padding-bottom: 20px; }
 
 .testimonials-area .owl-dots {
   margin-top: 20px; }
@@ -439,5 +702,237 @@ ul.portfolio-menu li {
 
 .author-review span {
   font-size: 16px; }
+
+/*===========about-page================*/
+.about-banner {
+  background-image: url(../img/pic5-1.jpg); }
+
+.about-banner-area {
+  background-position: 0 0;
+  height: 430px;
+  position: relative; }
+  .about-banner-area:after {
+    background-color: rgba(10, 10, 10, 0.3); }
+  .about-banner-area .scroll-next-section {
+    position: absolute;
+    left: 0;
+    bottom: -135px;
+    right: 0;
+    cursor: pointer;
+    width: 80px;
+    margin: 0 auto; }
+
+.about-banner-text {
+  margin-top: 170px; }
+  .about-banner-text h1 {
+    color: #fff;
+    font-size: 60px;
+    line-height: 60px;
+    text-transform: uppercase;
+    font-weight: 800; }
+  .about-banner-text span {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 800; }
+
+/*=========.offers-area ===========*/
+.offers-area {
+  padding: 150px 0 120px; }
+  .offers-area .offer-text {
+    font-size: 22px;
+    line-height: 26px; }
+
+/*=========.carousel-area===========*/
+.single-carousel-item {
+  display: block;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  transition: .7s;
+  z-index: 2; }
+
+.carousel-hover {
+  position: absolute;
+  left: 0;
+  top: 60%;
+  right: 0;
+  text-align: center;
+  font-size: 46px;
+  font-weight: 500;
+  line-height: 46px;
+  transition: .7s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 3; }
+
+.carousel-image {
+  border-radius: 5px;
+  transform: scale(1);
+  transition: .7s;
+  position: relative; }
+
+.single-carousel-item:hover .carousel-image {
+  transform: scale(1.1); }
+
+.single-carousel-item {
+  border-radius: 5px; }
+
+.single-carousel-item:hover .carousel-hover {
+  top: 50%;
+  margin-top: -23px;
+  opacity: 1;
+  visibility: visible;
+  color: #fff; }
+
+.single-carousel-item:hover .carousel-image:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  content: "";
+  z-index: 1;
+  opacity: .5; }
+
+.carousel-wrap .owl-nav {
+  opacity: 0;
+  transition: .3s; }
+
+.carousel-wrap:hover .owl-nav {
+  opacity: 1; }
+
+/*=========.about-us-area-2==========*/
+.about-us-area.about-us-area-2 {
+  padding: 120px 0 50px; }
+
+.about-us-area.about-us-area-2 .single-about-item {
+  flex-basis: 32%; }
+
+.about-us-area.about-us-area-2 .about-leaf-bg {
+  width: 2%; }
+
+.about-us-area.about-us-area-2 .single-about-item .number {
+  font-size: 42px;
+  line-height: 50px; }
+
+.about-us-area.about-us-area-2 .single-about-item .plussign {
+  font-weight: 300;
+  margin-left: -10px; }
+
+.about-us-area.about-us-area-2 .single-about-item .number span.yeart {
+  color: #124a2f;
+  margin-top: 15px; }
+
+/*========.services-area-3=============*/
+.services-area-3 {
+  padding: 60px 0;
+  background-color: #FCFAF7; }
+
+.threeservice-bg img {
+  border-radius: 5px 5px 0 0; }
+
+.threeservice-content {
+  padding: 30px 20px;
+  border-radius: 50px; }
+
+ul.threeservice-content li:nth-child(2) a {
+  color: #0b3d2c;
+  font-size: 26px; }
+
+.threesingle-service {
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  margin-bottom: 30px; }
+
+.threesingle-service-text {
+  margin-top: 30px; }
+
+.threesingle-service-text h5 {
+  font-size: 16px;
+  color: #0b3d2c;
+  margin-bottom: 5px; }
+
+.threesingle-service-text a {
+  color: #124a2f;
+  font-size: 14px;
+  line-height: 16px;
+  border-bottom: 2px solid #124a2f; }
+
+.threesingle-service-text ul {
+  list-style: disc;
+  margin-left: 20px; }
+
+/*=========.about-text-area============*/
+.nubmber-bg-1 {
+  background-image: url(https://landscaping.vamtam.com/wp-content/uploads/2016/12/1.svg); }
+
+.nubmber-bg-2 {
+  background-image: url(https://landscaping.vamtam.com/wp-content/uploads/2016/12/2.svg); }
+
+.nubmber-bg-3 {
+  background-image: url(https://landscaping.vamtam.com/wp-content/uploads/2016/12/3.svg); }
+
+.number-bg {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: contain;
+  padding: 70px 0 30px; }
+
+.about-text-area {
+  padding: 120px 0; }
+  .about-text-area h4 {
+    color: #2a7d2e;
+    font-size: 22px;
+    font-weight: 400; }
+
+/*========.single-about-area==========*/
+.single-about-bg-1 {
+  background-image: url(../img/pic5-1.jpg); }
+
+.single-about-bg-2 {
+  background-image: url(../img/pic8-1.jpg); }
+
+.single-about-bg-3 {
+  background-image: url(../img/Pic1.jpg); }
+
+.single-about-bg {
+  height: 520px; }
+  .single-about-bg.contact-bg {
+    height: 780px; }
+
+.single-about-area.colored-bg {
+  background-color: #FCFAF7;
+  padding: 80px 0; }
+
+.single-about-text h4 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 20px; }
+
+/*==============Conatct-Page-CSS===================*/
+.contact-bg {
+  background-image: url(../img/Header-1-3.jpg); }
+
+.contact-banner-area {
+  height: 300px;
+  position: relative; }
+  .contact-banner-area:after {
+    background-color: rgba(10, 10, 10, 0.3); }
+  .contact-banner-area h1 {
+    color: #fff;
+    font-size: 52px;
+    font-weight: 700;
+    margin-top: 115px; }
+
+.contact-page .section-title {
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 96px; }
+
+.google-map, .google-map iframe {
+  height: 920px;
+  width: 100%; }
 
 /*# sourceMappingURL=style.css.map */

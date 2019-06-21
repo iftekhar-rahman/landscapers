@@ -1,23 +1,96 @@
 /*****************************
 00. Home CSS
 *****************************/
+.header-area{
+    position: relative;
+}
+.site-logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200px;
+    z-index: 9;
+    background: #2A7D2E;
+    height: 150px;
+}
 
-.homepage-slide{
-    background-image: url(../img/banner.jpg);
+.site-logo img {
+    width: 170px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.slide-bg-1{background-image: url(../img/slide-1.jpg)}
+.slide-bg-2{background-image: url(../img/slide-2.jpg)}
+.homepage-slider-area, .single-homepage-slide{
     @extend %backgroundimage;
+    height: 650px;
+}
+.single-homepage-slide{
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    padding-top: 170px;
+    h1{
+        font-size: 66px;
+        line-height: 81px;
+        font-weight: 700;
+        color: #fff;
+    }
+}
+.slide-btn:nth-child(1) .boxed-btn {
+    background: transparent;
+}
+
+.slide-btn .boxed-btn:nth-child(1) {
+    background: transparent;
+    border-color: #fff;
+    margin-right: 10px;
+}
+
+.slide-btn .boxed-btn:nth-child(2) {
+    background-color: #fff;
+    color: #2A7D2E;
+}
+
+.slide-btn .boxed-btn {
+    font-size: 13px;
+    line-height: 17px;
+    font-weight: 500;
+    margin-top: 30px;
+}
+
+.slide-btn .boxed-btn:hover {
+    background-color: #2A7D2E;
+    border-color: #2A7D2E;
+    color: #fff;
 }
 
 
 /*=========services-area============*/ 
-.services-box {
-    background-color: #fff;
-    margin-top: -80px;
-    box-shadow: 0 5px 30px 0 rgba(0,0,0,.05);
+.services-area{
+    position: relative;
+    z-index: 2;
+    .grass-img {
+        position: absolute;
+        left: 0;
+        top: -101px;
+        right: 0;
+        text-align: center;
+    }
+    .services-box {
+        background-color: #fff;
+        margin-top: -80px;
+        box-shadow: 0 5px 30px 0 rgba(0,0,0,.05);
+    }
 }
 .single-service-item {
     padding: 30px 40px;
     border-right: 1px solid #E7E7E7;
     margin: 40px 0;
+    img{
+        margin-bottom: 15px;
+    }
     h3 {
         font-weight: 300;
         font-size: 26px;
@@ -41,10 +114,10 @@
 
 /*===========.about-us-area================*/ 
 .about-us-area {
-    padding: 90px 0 40px 0;
+    padding: 90px 0 0px 0;
 }
 .about-big-title {
-    margin-bottom: 90px;
+    margin-bottom: 80px;
     h1 {
         font-size: 70px;
         line-height: 74px;
@@ -54,6 +127,8 @@
     }
 }
 .single-about-item {
+    flex-basis: 24%;
+    padding-bottom: 50px;
     .number {
         font-weight: 500;
         font-size: 80px;
@@ -61,7 +136,7 @@
         line-height: 96px;
         color: #2A7D2E;
         margin-bottom: 15px;
-        span {
+        span.yeart {
             display: block;
             font-size: 34px;
             line-height: 34px;
@@ -77,7 +152,31 @@
         margin-bottom: 10px;
     }
 }
-
+.about-leaf-bg {
+    width: 14%;
+}
+.about-leaf-bgleft{
+    background-image: url(https://landscaping.vamtam.com/wp-content/uploads/2017/09/plants-left.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-attachment: scroll;
+    background-size: auto;
+    // border-top-width: 1px;
+    // border-right-width: 1px;
+    // border-bottom-width: 1px;
+    // border-left-width: 1px;
+}
+.about-leaf-bgright{
+    background-image: url(https://landscaping.vamtam.com/wp-content/uploads/2017/09/plants-right.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-attachment: scroll;
+    background-size: auto;
+    // border-top-width: 1px;
+    // border-right-width: 1px;
+    // border-bottom-width: 1px;
+    // border-left-width: 1px;
+}
 
 /*========portfolio-area==========*/ 
 .portfolio-area {
@@ -87,14 +186,109 @@
         margin-bottom: 30px;
     }
 }
-ul.portfolio-menu {
-    li {
-        display: inline-block;
-        color: #0b3d2c;
-        font-weight: 700;
-        padding: 7px;
-        cursor: pointer;
+
+.portfolio-filters button {
+    color: #0b3d2c;
+    font-weight: 700;
+    margin: 7px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    position: relative;
+    &:before {
+        position: absolute;
+        content: attr(data-count);
+        width: 25px;
+        height: 20px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+        font-size: 11px;
+        background: #2a7d2e;
+        line-height: 1.8;
+        text-align: center;
+        opacity: 0;
+        transition: .3s;
     }
+    &::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        bottom: -4px;
+        left: 50%;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid #2a7d2e;
+        transform: translateX(-50%);
+        transition: bottom .3s;
+        opacity: 0;
+    }
+}
+.portfolio-filters button:hover::before {
+    bottom: 110%;
+    opacity: 1;
+}
+.portfolio-filters button:hover::after {
+    bottom: calc(110% - 4px);
+    opacity: 1;
+}
+.portfolio-filters button.is-checked {
+    text-decoration: line-through;
+}
+.portfolio__content {
+    position: relative;
+    /* width: 450px; */
+    /* z-index: 1; */
+    /* height: 300px; */
+    overflow: hidden;
+    border-radius: 10px;
+}
+.hover-content {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(0);
+    transition: .3s;
+    opacity: 0;
+}
+.portfolio__content:hover .hover-content {
+    bottom: 50%;
+    transform: translateY(50%);
+    opacity: 1;
+}
+.portfolio__content::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.6);
+    opacity: 0;
+    z-index: 1;
+}
+.portfolio__content:hover:before {
+    opacity: 1;
+}
+.portfolio__content .portfolio-image img {
+    transform: scale(1);
+    transition: .3s;
+}
+.portfolio__content:hover .portfolio-image img {
+    transform: scale(1.2);
+}
+.portfolio--item.grid-item {
+    margin-top: 30px;
 }
 
 
@@ -117,6 +311,11 @@ ul.portfolio-menu {
     padding-right: 50px;
     padding-bottom: 120px;
     padding-top: 180px;
+    background-image: url(https://landscaping.vamtam.com/wp-content/uploads/2017/09/Leaf-1-1.svg);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-attachment: scroll;
+    background-size: auto;
 }
 
 .service-wrap{
@@ -168,6 +367,9 @@ ul.portfolio-menu {
         padding-bottom: 30px;
         background-color: #2A7D2E;
         color: #fff;
+        img{
+            margin-bottom: 15px;
+        }
         .boxed-btn {
             border-color: #fff;
             margin-top: 15px;
@@ -197,6 +399,15 @@ ul.portfolio-menu {
 
 
 /*===========.testimonials-area============*/ 
+.testimonial-bg{background-image: url(https://landscaping.vamtam.com/wp-content/uploads/2017/09/Leaf-testimonials-1.svg);}
+.testimonials-area {
+    padding: 80px 0 0px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: contain;
+    border-bottom: 1px solid #F5F1EB;
+}
 .testimonials-area h5 {
     font-size: 16px;
 }
@@ -208,9 +419,10 @@ ul.portfolio-menu {
 .testimonials-area .section-title {
     margin-bottom: 5px;
 }
-.testimonials-area {
-    padding: 80px 0 110px;
-    background-color: #FBF9F6;
+
+.testimonial-like-icon{
+    padding-top: 90px;
+    padding-bottom: 20px;
 }
 .testimonials-area .owl-dots {
     margin-top: 20px;
