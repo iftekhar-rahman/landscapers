@@ -50,7 +50,11 @@
 }
 .slide-btn .boxed-btn:nth-child(2) {
     @extend %white-bg-color;
-    color: #2A7D2E;
+    @extend %primary-color;
+}
+.slide-btn .boxed-btn:hover:nth-child(2) {
+    @extend %primary-bg-color;
+    @extend %white-color;
 }
 .slide-btn .boxed-btn {
     font-size: 13px;
@@ -59,9 +63,9 @@
     margin-top: 30px;
 }
 .slide-btn .boxed-btn:hover {
-    background-color: #2A7D2E;
+    @extend %primary-bg-color;
     border-color: #2A7D2E;
-    color: #fff;
+    @extend %white-color;
 }
 .homepage-slider-area .owl-nav div {
     left: 20px;
@@ -70,8 +74,7 @@
     line-height: 50px;
     font-size: 35px;
     background-color: rgba(255,255,255,.1);
-    opacity: 0;
-    visibility: hidden;
+    @extend %invisible;
     @extend %basetransition2;
 }
 .homepage-slider-area .owl-nav div.owl-next {
@@ -79,29 +82,28 @@
     right: 20px;
 }
 .homepage-slider-area:hover .owl-nav div {
-    opacity: 1;
-    visibility: visible;
+    @extend %visible;
 }
 .homepage-slider-area .owl-nav div:hover {
-    background-color: #2A7D2E;
-    color: #fff;
+    @extend %primary-bg-color;
+    @extend %white-color;
 }
 
 
 /*=========services-area============*/ 
 .services-area{
-    position: relative;
-    z-index: 2;
+    @extend %posrelative;
+    @extend %zindex2;
 }
 .grass-img {
-    position: absolute;
+    @extend %posabsolute;
     left: 0;
     top: -101px;
     right: 0;
-    text-align: center;
+    @extend %textcenter;
 }
 .services-box {
-    background-color: #fff;
+    @extend %white-bg-color;
     margin-top: -80px;
     box-shadow: 0 5px 30px 0 rgba(0,0,0,.05);
 }
@@ -111,8 +113,8 @@
     margin: 40px 0;
 }
 .single-service-item a{
-    color: #2A7D2E;
-    display: inline-block;
+    @extend %primary-color;
+    @extend %inlineblock;
 }
 .single-service-item .iconht a{
     border-bottom: 2px solid transparent;
@@ -144,7 +146,7 @@
     font-size: 70px;
     line-height: 74px;
     font-weight: 200;
-    color: #2A7D2E;
+    @extend %primary-color;
     margin-bottom: 25px;
 }
 .single-about-item {
@@ -155,13 +157,13 @@
 .single-about-item .number{
     font-weight: 500;
     font-size: 80px;
-    display: block;
+    @extend %displayblock;
     line-height: 96px;
-    color: #2A7D2E;
+    @extend %primary-color;
     margin-bottom: 15px;
 }
 .single-about-item .number .yeart{
-    display: block;
+    @extend %displayblock;
     font-size: 34px;
     line-height: 34px;
     font-weight: 300;
@@ -201,15 +203,15 @@
     margin-bottom: 30px;
 }
 .portfolio-filters button {
-    color: #0b3d2c;
+    @extend %secondary-color;
     font-weight: 700;
     margin: 7px;
     border: none;
-    cursor: pointer;
-    background: transparent;
-    position: relative;
+    @extend %cursorpointer;
+    @extend %backtransaprent;
+    @extend %posrelative;
     &:before {
-        position: absolute;
+        @extend %posabsolute;
         content: attr(data-count);
         width: 25px;
         height: 20px;
@@ -217,16 +219,16 @@
         left: 50%;
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
-        color: #fff;
+        @extend %white-color;
         font-size: 11px;
-        background: #2a7d2e;
+        @extend %primary-bg-color;
         line-height: 1.8;
-        text-align: center;
+        @extend %textcenter;
         opacity: 0;
         @extend %basetransition;
     }
     &::after {
-        position: absolute;
+        @extend %posabsolute;
         content: "";
         width: 0;
         height: 0;
@@ -254,20 +256,20 @@
     text-decoration: line-through;
 }
 .portfolio__content {
-    position: relative;
+    @extend %posrelative;
     overflow: hidden;
     border-radius: 10px;
-    display: block;
+    @extend %displayblock;
 }
 .hover-content {
-    position: absolute;
-    width: 100%;
+    @extend %posabsolute;
+    @extend %w100;
     height: auto;
     left: 0;
     bottom: 0;
     z-index: 1;
-    text-align: center;
-    color: #fff;
+    @extend %textcenter;
+    @extend %white-color;
     padding: 0 20px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -288,10 +290,10 @@
     opacity: 1;
 }
 .portfolio__content::before {
-    position: absolute;
+    @extend %posabsolute;
     content: "";
-    width: 100%;
-    height: 100%;
+    @extend %w100;
+    @extend %h100;
     left: 0;
     top: 0;
     background: rgba(0,0,0,0.6);
@@ -305,7 +307,7 @@
     -webkit-transform: scale(1);
     transform: scale(1);
     @extend %basetransition;
-    width: 100%;
+    @extend %w100;
 }
 .portfolio__content:hover .portfolio-image img {
     -webkit-transform: scale(1.2);
@@ -355,23 +357,23 @@
         padding-top: 50px;
         padding-bottom: 100px;
         margin-top: -70px;
-        position: relative;
-        z-index: 2;
+        @extend %posrelative;
+        @extend %zindex2;
         &:after {
-            background-color: #fff;
-            position: absolute;
+            @extend %white-bg-color;
+            @extend %posabsolute;
             left: 0;
             top: 0;
-            width: 100%;
-            height: 100px;
+            @extend %w100;
+            @extend %h100;
             content: "";
             z-index: -1;
         }
         h3 {
-            color: #2a7d2e;
+            @extend %primary-color;
         }
         h4 {
-            color: #0b3d2c;
+            @extend %secondary-color;
             font-size: 16px;
             font-weight: 500;
             line-height: 22px;
@@ -390,8 +392,8 @@
         padding-right: 50px;
         padding-top: 90px;
         padding-bottom: 30px;
-        background-color: #2A7D2E;
-        color: #fff;
+        @extend %primary-bg-color;
+        @extend %white-color;
         .boy-icon{
             margin-bottom: 15px;
         }
@@ -399,8 +401,8 @@
             border-color: #fff;
             margin-top: 15px;
             &:hover {
-                background-color: #fff;
-                color: #2A7D2E;
+                @extend %white-bg-color;
+                @extend %primary-color;
             }
         }
     }
@@ -415,10 +417,10 @@
     padding: 100px 0 30px 50px;
 }
 .single-service-four h3 {
-    color: #2A7D2E;
+    @extend %primary-color;
 }
 .author-wrap h5 {
-    color: #0b3d2c;
+    @extend %secondary-color;
     font-size: 16px;
 }
 
@@ -456,10 +458,10 @@
     font-size: 10px;
     font-weight: 400;
     text-transform: uppercase;
-    position: relative;
+    @extend %posrelative;
     margin-left: 30px;
     &:after {
-        position: absolute;
+        @extend %posabsolute;
         left: -20px;
         top: 14px;
         width: 10px;

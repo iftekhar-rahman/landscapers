@@ -6,17 +6,17 @@
 }
 .footer-bg{background-image: url(../img/footer.jpg)}
 .footer-area .boxed-btn {
-    background: transparent;
-    color: #2A7D2E;
+    @extend %backtransaprent;
+    @extend %primary-color;
     margin-bottom: 40px;
 }
 
 .footer-area .boxed-btn:hover {
-    background: #2A7D2E;
-    color: #fff;
+    @extend %primary-bg-color;
+    @extend %white-color;
 }
 .footer-text a{
-    color: #2A7D2E;
+    @extend %primary-color;
     border-bottom: 2px solid transparent;
     &:hover{
         border-bottom: 2px solid #2A7D2E;
@@ -27,7 +27,7 @@
     display: inline-block;
     font-size: 30px;
     margin-top: 30px;
-    color: #2A7D2E;
+    @extend %primary-color;
     &:hover{
         color: #154D32 !important;
     }

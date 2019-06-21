@@ -1,6 +1,5 @@
 jQuery(document).ready(function($){
-
-
+    
     $('select').niceSelect();
 
     // portfolio isotope gallery;

@@ -1,7 +1,7 @@
 /*=============== Header CSS ==================*/
 .header-top {
-    background-color: #124A2F;
-    color: #fff;
+    @extend %secondary-bg-color;
+    @extend %white-color;
     padding: 18px 0px;
     .header-mail:hover {
         color: #9bd49e;
@@ -28,7 +28,7 @@
                 color: $mainmenu-link-color;
             }
             &:hover a {
-                color: #2A7D2E;
+                @extend %primary-color;
             }
         }
     }
@@ -37,7 +37,7 @@
         margin-right: 8px;
         cursor: pointer;
         &:hover {
-            color: #2A7D2E;
+            @extend %primary-color;
         }
     }
 }

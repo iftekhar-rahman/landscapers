@@ -3,7 +3,7 @@
 .contact-banner-area{
     @extend %backgroundimage;
     height: 300px;
-    position: relative;
+    @extend %posrelative;
     @extend %zindex2;
 }
 .contact-banner-area:after{
@@ -11,7 +11,7 @@
     background-color: rgba(10, 10, 10, 0.3);
 }
 .contact-banner-area h1 {
-    color: #fff;
+    @extend %white-color;
     font-size: 52px;
     font-weight: 700;
     margin-top: 115px;
@@ -22,9 +22,9 @@
     line-height: 96px;
 }
 .contact-page .single-about-text{
-    width: 100%;
+    @extend %w100;
 }
 .google-map, .google-map iframe{
     height: 920px;
-    width: 100%;
+    @extend %w100;
 }
