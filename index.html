@@ -14,9 +14,11 @@
         <!--Plugins-->
         <link href="css/owl.carousel.min.css" rel="stylesheet">
         <link href="css/nice-select.css" rel="stylesheet">
+        <link href="css/slicknav.min.css" rel="stylesheet">
 
         <!--Theme specific styles-->
         <link href="css/style.css" rel="stylesheet">
+        <link href="css/responsive.css" rel="stylesheet">
         
         <!--Core jQuery-->
         <script src="js/jquery-3.3.1.slim.min.js"></script>
@@ -31,14 +33,17 @@
         <!-- .header-area starts -->
         <div class="header-area">
             <!-- .header-top starts -->
+            <!-- .site-logo starts -->
             <div class="site-logo">
-                <a href="#"><img src="img/npl-logo-1.png" alt=""></a>
-            </div>
+                <div class="d-flex justify-content-center align-items-center h-100">
+                    <a href="#"><img src="img/npl-logo-1.png" alt=""></a>
+                </div>
+            </div><!-- .site-logo ends -->
             <div class="header-top header-top-bg">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-4 offset-md-2">
-                            <span><i class="fa fa-clock"></i> Mon - Fri: 8:00 - 17:00 | Sat 8:00 - 12:00</span>
+                            <span><i class="fa fa-clock-o"></i> Mon - Fri: 8:00 - 17:00 | Sat 8:00 - 12:00</span>
                         </div>
                         <div class="col-md-4">
                             <a href="#" class="header-mail">hello@norfolklandscapegardeners.co.uk</a>
@@ -55,7 +60,7 @@
                     <div class="row">
                         <div class="col-md-7 offset-md-2">
                             <div class="mainmenu">
-                                <ul>
+                                <ul id="menu">
                                     <li><a href="#">Home</a></li>
                                     <li><a href="#">About Us</a></li>
                                     <li><a href="#">Services</a></li>
@@ -477,6 +482,7 @@
         <script src="js/sticky-sidebar.js"></script>
         <script src="js/jquery.counterup.min.js"></script>
         <script src="js/jquery-waypoints.min.js"></script>
+        <script src="js/jquery.slicknav.min.js"></script>
 
         <!--Active & Custom JS-->
         <script src="js/main.js"></script>

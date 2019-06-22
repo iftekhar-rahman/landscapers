@@ -1,4 +1,6 @@
 jQuery(document).ready(function($){
+
+    $('#menu').slicknav();
     
     $('select').niceSelect();
 

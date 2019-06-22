@@ -14,7 +14,7 @@
     }
 }
 
-// All belo mobile lg
+// All below mobile lg
 @mixin all-below-mobile-lg {
     @media (max-width: 767px) {
         @content;
