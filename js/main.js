@@ -66,24 +66,34 @@ jQuery(document).ready(function($){
             0: {
                 items: 1,
                 margin: 0,
-                nav: false
+                nav: false,
+                dots: true,
             },
-            480: {
+            576: {
                 items: 2,
-                margin: 30,
-                nav: false
+                nav: false,
+                dots: true,
             },
             768: {
+                items: 2,
+                nav: false,
+                dots: true,
+            },
+            991: {
                 items: 3,
             }
 
         }
     });
 
-    
 
 
-
+    $(".header-right i.fa").on("click", function(){
+        $(".search-box").addClass("active");
+    }) ;
+    $(".search-box i.fa").on("click", function(){
+        $(".search-box").removeClass("active");
+    }) ;
 
     
 

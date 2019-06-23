@@ -30,13 +30,22 @@
         <![endif]-->
     </head>
     <body>
+        <!-- search-box -->
+        <div class="search-box">
+            <div class="d-flex justify-content-center align-items-center w-100 h-100">
+                <i class="i fa fa-close"></i>
+                <input type="text" placeholder="Search..." name="search">
+            </div>
+        </div>
+        <!-- search-box -->
+
         <!-- .header-area starts -->
         <div class="header-area">
             <!-- .header-top starts -->
             <!-- .site-logo starts -->
             <div class="site-logo">
                 <div class="d-flex justify-content-center align-items-center h-100">
-                    <a href="#"><img src="img/npl-logo-1.png" alt=""></a>
+                    <a href="#Logo"><img src="img/npl-logo-1.png" alt=""></a>
                 </div>
             </div><!-- .site-logo ends -->
             <div class="header-top header-top-bg">
@@ -63,7 +72,25 @@
                                 <ul id="menu">
                                     <li><a href="#">Home</a></li>
                                     <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Services</a></li>
+                                    <li><a href="#">Services</a>
+                                        <!-- dropdown menu starts -->
+                                        <ul>
+                                            <li><a href="#">Tree Surgery</a></li>
+                                            <li><a href="#">Landscaping</a></li>
+                                            <li><a href="#">Patio Services</a>
+                                                <ul>
+                                                    <li><a href="#">Tree Surgery</a></li>
+                                                    <li><a href="#">Landscaping</a></li>
+                                                    <li><a href="#">Patio Services</a></li>
+                                                    <li><a href="#">Gardeb Maintenance</a></li>
+                                                    <li><a href="#">Lawn Services</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Gardeb Maintenance</a></li>
+                                            <li><a href="#">Lawn Services</a></li>
+                                        </ul>
+                                        <!-- dropdown menu ends -->
+                                    </li>
                                     <li><a href="#">Testimonials</a></li>
                                     <li><a href="#">Contact Us</a></li>
                                 </ul>
