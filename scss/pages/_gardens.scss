@@ -1,0 +1,156 @@
+/*=============gardens-page-css================*/ 
+
+// works-portfolio
+.work-portfolio-bg-1{background-image: url(../img/gallery1-r-800x488.jpg)}
+.work-portfolio-bg-2{background-image: url(../img/gallery2-685x463.jpg)}
+.work-portfolio-bg-3{background-image: url(../img/gallery3-r-800x534.jpg)}
+.work-portfolio-bg-4{background-image: url(../img/gallery5-685x1087.jpg)}
+.work-portfolio-bg-5{background-image: url(../img/gallery4-r-800x525.jpg)}
+.work-portfolio-bg-6{background-image: url(../img/gallery6-1-685x497.jpg)}
+
+.single-work-portfolio{
+    display: block;
+    @extend %backgroundimage;
+    height: 255px;
+    border-radius: 5px;
+}
+.single-work-portfolio.pt2{
+    height: 280px;
+}
+.single-work-portfolio.pt3{
+    height: 280px;
+}
+.single-work-portfolio.pt4{
+    height: 670px;
+}
+.single-work-portfolio.pt5{
+    height: 275px;
+}
+.single-work-portfolio.pt6{
+    height: 300px;
+}
+
+// .gardens-sidebar
+.gardens-sidebar {
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.05);
+    padding: 40px 0 100px;
+    margin-bottom: 60px;
+}
+.gardens-submenu h3 {
+    font-weight: 400;
+    font-size: 26px;
+    color: #0b3d2c;
+}
+.gardens-submenu ul li {
+    border-bottom: 1px solid #ededed;
+}
+.gardens-submenu ul li a {
+    color: #0b3d2c;
+    padding: 10px 10px 10px 0;
+    display: block;
+}
+.gardens-sidebar .testimonial-like-icon {
+    margin-bottom: 20px;
+}
+.ourcontact-info {
+    background-color: #0B3D2C;
+    color: #fff;
+    padding: 40px 50px;
+}
+.men-icon {
+    margin-bottom: 30px;
+}
+.ourcontact-info h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+.ourcontact-info a:hover {
+    color: #fff;
+}
+.ourcontact-info a {
+    border-bottom: 2px solid #fff;
+    text-align: center;
+}
+
+
+// .help-text
+.help-text {
+    padding-top: 50px;
+}
+.works-portfolio {
+    padding-top: 50px;
+}
+.help-text .section-title, .works-portfolio .section-title, .tips-section .section-title {
+    margin-bottom: 20px;
+}
+.tips-section {
+    padding: 50px 0;
+}
+.single-work-portfolio-wrap {
+    overflow: hidden;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+.single-work-portfolio-wrap .single-work-portfolio {
+    transform: scale(1);
+    transition: .7s;
+}
+.single-work-portfolio-wrap:hover .single-work-portfolio {
+    transform: scale(1.1);
+}
+.fullport-btn{
+    margin-top: 20px;
+}
+
+// .tips-section
+.tips-section ul li {
+    margin-bottom: 15px;
+}
+.tips-section ul li a {
+    color: #2A7D2E;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+}
+.tips-section ul li a:hover {
+    text-decoration: underline;
+    color: #154D32;
+}
+.tips-section .section-title {
+    margin-bottom: 25px;
+}
+
+.summer-garden-bg{background-image: url(../img/post1-685x385.jpg)}
+.summer-garden{
+    height: 240px;
+}
+.tips-section-right-text h5 a {
+    color: #2A7D2E;
+}
+.tips-section-right-text h5 {
+    font-size: 16px;
+}
+.tips-section-right-text h4 {
+    font-size: 22px;
+}
+.tips-section-right-text h4 a {
+    color: #154D32;
+}
+.tips-section-right-text .tips-date a {
+    color: #ccc;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+.tips-section-right-text .tips-date a:hover {
+    color: #2A7D2E;
+}
+.tips-section-right-text ul li {
+    display: inline-block;
+    margin-right: 5px;
+}
+.tips-section-right-text ul li a {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.tips-section-right-text ul li a:hover {
+    text-decoration: none;
+}

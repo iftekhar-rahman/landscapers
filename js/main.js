@@ -47,6 +47,13 @@ jQuery(document).ready(function($){
 		nav: false,
         dots: false,
     });
+    // testimonials-wrap
+	$(".testimonials-wrap-2").owlCarousel({
+		items: 1,
+		loop: true,
+		nav: false,
+        dots: true,
+    });
     
     $('.counter').counterUp({
         delay: 10,
@@ -85,6 +92,7 @@ jQuery(document).ready(function($){
 
         }
     });
+    
 
 
 
@@ -96,7 +104,13 @@ jQuery(document).ready(function($){
     }) ;
 
     
-
+    // $(".scroll-next-section").on("click", function(){
+    //     $("#sjhadkl").scrollTop(0);
+    // })
     
 
+});
+
+jQuery(window).load(function(){
+    jQuery(".work-portfolio-wrapper").isotope();
 });
