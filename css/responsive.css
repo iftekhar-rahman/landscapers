@@ -386,7 +386,8 @@
   .mainmenu-area .mainmenu ul li ul li {
     display: block; }
   .mainmenu-area .mainmenu ul li ul ul {
-    left: 260px; }
+    left: 260px;
+    padding-top: 0; }
   .search-box {
     position: fixed;
     left: 0;

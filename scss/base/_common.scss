@@ -40,6 +40,8 @@ textarea {
     padding: 10px 20px;
     width: 100%;
     margin-bottom: -7px;
+    border-color: #ced4da;
+    transition: all .3s ease;
     &:focus {
         border-color: #2a7d2e;
     }

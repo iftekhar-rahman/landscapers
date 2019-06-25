@@ -46,6 +46,7 @@ jQuery(document).ready(function($){
 		loop: true,
 		nav: false,
         dots: false,
+        autoHeight:true
     });
     // testimonials-wrap
 	$(".testimonials-wrap-2").owlCarousel({
@@ -53,6 +54,7 @@ jQuery(document).ready(function($){
 		loop: true,
 		nav: false,
         dots: true,
+        autoHeight:true
     });
     
     $('.counter').counterUp({
@@ -112,5 +114,5 @@ jQuery(document).ready(function($){
 });
 
 jQuery(window).load(function(){
-    jQuery(".work-portfolio-wrapper").isotope();
+    jQuery(".work-portfolio-wrapper, .reviews-wrapper").isotope();
 });

@@ -1,0 +1,52 @@
+/*===========.reviews-css=============*/ 
+// .message-form-area
+.message-form-area {
+    padding: 90px 0 80px;
+}
+.message-form-area label {
+    font-size: 12px;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+.message-form-area label input[type=checkbox] {
+    width: 13px;
+    height: 14px;
+    position: absolute;
+    left: 0;
+    top: 3px;
+}
+.message-form-area textarea{
+    height: 120px;
+}
+
+// reviews-area
+.reviews-contact-bg{background-image: url(../img/pic2.jpg)}
+.single-review {
+    box-shadow: 0 1px 20px 0 rgba(0,0,0,.04);
+    padding: 50px;
+    margin-bottom: 50px;
+    transition: all .3s ease;
+}
+.single-review:hover {
+    box-shadow: 0 1px 20px 0 rgba(0,0,0,.08);
+}
+.reviews-wrapper .col-lg-4{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.peopleamount a {
+    font-size: 10px;
+    font-weight: 500;
+    color: #2A7D2E;
+    text-transform: uppercase;
+}
+.peopleamount a:hover {
+    color: #154D32;
+}
+.peopleamount {
+    margin-bottom: 40px;
+}
+.reviews-contact-form {
+    padding: 40px 0;
+}

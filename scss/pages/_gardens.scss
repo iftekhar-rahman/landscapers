@@ -71,7 +71,9 @@
     border-bottom: 2px solid #fff;
     text-align: center;
 }
-
+.gardens-testimonial .owl-dots {
+    margin-top: 20px;
+}
 
 // .help-text
 .help-text {
@@ -93,7 +95,7 @@
 }
 .single-work-portfolio-wrap .single-work-portfolio {
     transform: scale(1);
-    transition: .7s;
+    transition: all .7s ease;
 }
 .single-work-portfolio-wrap:hover .single-work-portfolio {
     transform: scale(1.1);
