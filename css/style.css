@@ -1190,4 +1190,14 @@ ul.threeservice-content li:nth-child(2) a {
 .reviews-contact-form {
   padding: 40px 0; }
 
+.single-review i.fa {
+  color: #154D32;
+  font-size: 30px;
+  margin-bottom: 15px; }
+
+.single-review h3 {
+  font-weight: 300;
+  color: #154D32;
+  font-size: 26px; }
+
 /*# sourceMappingURL=style.css.map */

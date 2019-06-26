@@ -16,6 +16,11 @@
     flex: 0 0 100% !important;
     max-width: 100% !important; } }
 
+@media (min-width: 480px) and (max-width: 575px) {
+  .about-banner-text h1 {
+    font-size: 26px  !important;
+    line-height: 38px !important; } }
+
 @media (max-width: 767px) {
   .site-logo {
     height: 70px !important; }
@@ -107,7 +112,9 @@
   .contact-page .section-title {
     line-height: 42px !important; }
   .single-about-area.contact-page {
-    margin-top: 30px; } }
+    margin-top: 30px; }
+  .single-review {
+    padding: 20px; } }
 
 /* Small devices (landscape phones, 576px and up)*/
 /* Medium devices (tablets, 768px and up)*/
@@ -155,6 +162,12 @@
     color: #000; }
   .slicknav_menu .slicknav_icon-bar {
     background-color: #ffffff; }
+  .slicknav_nav .slicknav_row, .slicknav_nav a {
+    padding: 10px 10px; }
+  .slicknav_nav .slicknav_row:hover, .slicknav_nav .slicknav_row:hover a {
+    border-radius: 0;
+    background: #2A7D2E;
+    color: #fff; }
   .mainmenu, .header-top, .header-right .boxed-btn {
     display: none; }
   .site-logo {
@@ -232,7 +245,7 @@
     padding: 0 0px; }
   /*==about-page-css==*/
   .about-banner-text h1 {
-    font-size: 38px;
+    font-size: 32px;
     line-height: 44px;
     margin-bottom: 5px; }
   .about-banner-area {
@@ -244,7 +257,7 @@
   .about-banner-area .scroll-next-section img {
     max-width: 40px; }
   .about-banner-area .scroll-next-section {
-    bottom: -92px;
+    bottom: -17px !important;
     width: 45px; }
   .carousel-hover {
     position: relative;
@@ -281,7 +294,20 @@
     margin-top: 135px; }
   .contact-page .section-title {
     font-size: 50px;
-    line-height: 66px; } }
+    line-height: 66px; }
+  .ourcontact-info {
+    text-align: center; }
+  .reviews-wrapper .col-lg-4 {
+    padding-left: 15px;
+    padding-right: 15px; }
+  .single-review {
+    box-shadow: 0 1px 8px 0px rgba(0, 0, 0, 0.04);
+    margin-bottom: 30px;
+    padding: 40px 30px; }
+  .message-form-area {
+    padding: 60px 0 50px; }
+  .single-review h3 {
+    font-size: 22px; } }
 
 /* Large devices (desktops, 992px and 1199px)*/
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -313,7 +339,13 @@
   .services-area-2 .pleft {
     padding-left: 20px; }
   .single-testimonial {
-    padding: 0 0px; } }
+    padding: 0 0px; }
+  .reviews-wrapper .col-lg-4 {
+    padding-left: 15px;
+    padding-right: 15px; }
+  .single-review {
+    box-shadow: 0 1px 8px 0px rgba(0, 0, 0, 0.04);
+    margin-bottom: 30px; } }
 
 /* Extra large devices (large desktops, 1200px and 1500px)*/
 @media (min-width: 1200px) and (max-width: 1500px) {
@@ -427,7 +459,14 @@
     line-height: 57px; }
   .search-box i.fa:hover {
     background-color: #2A7D2E;
-    color: #fff; } }
+    color: #fff; }
+  .about-banner-area {
+    position: relative; }
+  .scroll-next-section {
+    left: 0;
+    bottom: -35px !important;
+    right: 0;
+    text-align: center; } }
 
 /*mobile-xs*/
 /*mobile*/
