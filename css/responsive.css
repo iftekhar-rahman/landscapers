@@ -243,6 +243,17 @@
     flex: 0 0 100% !important; }
   .single-testimonial {
     padding: 0 0px; }
+  .gardens-area .d-flex {
+    flex-direction: column; }
+  .left-sidebar {
+    width: 100%;
+    order: 1; }
+  .gardens-right {
+    width: 100%;
+    margin-left: 0; }
+  .gardens-area .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px; }
   /*==about-page-css==*/
   .about-banner-text h1 {
     font-size: 32px;
