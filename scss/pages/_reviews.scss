@@ -5,14 +5,14 @@
 }
 .message-form-area label {
     font-size: 12px;
-    position: relative;
+    @extend %posrelative;
     padding-left: 20px;
     margin-bottom: 20px;
 }
 .message-form-area label input[type=checkbox] {
     width: 13px;
     height: 14px;
-    position: absolute;
+    @extend %posabsolute;
     left: 0;
     top: 3px;
 }
@@ -38,11 +38,11 @@
 .peopleamount a {
     font-size: 10px;
     font-weight: 500;
-    color: #2A7D2E;
+    @extend %primary-color;
     text-transform: uppercase;
 }
 .peopleamount a:hover {
-    color: #154D32;
+    @extend %secondary-color;
 }
 .peopleamount {
     margin-bottom: 40px;
@@ -51,12 +51,12 @@
     padding: 40px 0;
 }
 .single-review i.fa {
-    color: #154D32;
+    @extend %secondary-color;
     font-size: 30px;
     margin-bottom: 15px;
 }
 .single-review h3 {
     font-weight: 300;
-    color: #154D32;
+    @extend %secondary-color;
     font-size: 26px;
 }

@@ -82,6 +82,7 @@ jQuery(document).ready(function($){
                 items: 2,
                 nav: false,
                 dots: true,
+                margin: 15,
             },
             768: {
                 items: 2,
@@ -121,6 +122,32 @@ jQuery(document).ready(function($){
             });
         } // End if
     });
+
+    // declare variable
+  var scrollTop = $(".scrollTop");
+
+  $(window).scroll(function() {
+    // declare variable
+    var topPos = $(this).scrollTop();
+
+    // if user scrolls down - show scroll to top button
+    if (topPos > 100) {
+      $(scrollTop).css("opacity", "1");
+
+    } else {
+      $(scrollTop).css("opacity", "0");
+    }
+
+  }); // scroll END
+
+    //Click event to scroll to top
+    $(".scrollTop").click(function() {
+        $('html, body').animate({
+        scrollTop: 0
+        }, 1000);
+        return false;
+
+    }); // click() scroll top EMD
     
 
 });

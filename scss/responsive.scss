@@ -683,6 +683,31 @@
 /*tablet*/ 
 @media(min-width: 768px) {
     
+.scrollTop {
+    position: fixed;
+    right: 5%;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.4s ease-in-out 0s;
+    font-size: 40px;
+    color: #2A7D2E;
+    z-index: 99999;
+}
+.scrollTop a {
+    font-size: 18px;
+    color: #2A7D2E;
+}
+.scrollTop:hover {
+    background-color: #154D32;;
+    color: #fff;
+}
+
+
 }
 /*desktops*/ 
 @media(min-width: 992px) {

@@ -1,6 +1,4 @@
-/*****************************
-00. Helper CSS
-*****************************/
+//=============== Helper CSS ===================//
 
 
 // %imagezommin{
@@ -65,7 +63,7 @@
 	@include transition(all .3s ease-in);
 }
 %basetransition2{
-	@include transition(.5s);
+	@include transition(all .5s ease);
 }
 %invisible{
 	visibility: hidden;
